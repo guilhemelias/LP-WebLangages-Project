@@ -3,66 +3,60 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="src/design.css" />
+    <link rel="stylesheet" href="src/computer_layout.css" />
+
     <title>HotHotHot - Temperature/Historic</title>
 </head>
 
 <body>
 
-    <header>
+    <header class="nav">
         <h1>Hot Hot Hot</h1>
 
         <nav>
-            <ul>
-                <li><a href="temperatureHistoricView.html">Temperature</a></li>
-                <li><a href="account.html">Account</a></li>
-                <li><a href="parameters.html">Parameters</a></li>
-                <li><a href="log_out.html">Log out</a></li>
-            </ul>
+            <a href="temperatureHistoricView.html" class="active">Temperature</a>
+            <a href="account.html">Account</a>
+            <a href="parameters.html">Parameters</a>
         </nav>
     </header>
 
+    <main>
+        <article class="artTemp">
+            <section class="customCircle">
+                <h2>INSIDE</h2>
+                <p>23 °C</p>
+                <span tooltip="ALERTE : Baissez le chauffage" class="alert-span">!</span>
+            </section>
 
-    <section>
-        <header>
-            <h1>Sensors</h1>
-        </header>
-        <section>
-            <h1>Inside</h1>
-            <p>23 °C</p>
-            <details>
-                <summary>!</summary>
-                <h4>Alert</h4>
-                <p>Baissez le chauffage</p>
-        </section>
+            <section class="customCircle">
+                <h2>OUTSIDE</h2>
+                <p>15 °C</p>
+                <span tooltip="ALERTE : Mettez votre pull" class="alert-span">!</span>
 
-        <section>
-            <h1>Outside</h1>
-            <p>15 °C</p>
-            <details>
-                <summary>!</summary>
-                <h4>Alert</h4>
-                <p>Prenez un pull pour sortir</p>
-            </details>
-        </section>
-    </section>
+            </section>
+        </article>
 
+        <hr>
 
-    <section>
-        <header>
-            <h1>Data historic</h1>
-        </header>
-        <section>
+        <article class="artHist">
             <header>
-                <h1>Inside temperature</h1>
+                <h2>Data historic</h2>
             </header>
-        </section>
+            <section>
+                <header>
+                    <h2>Inside temperature</h2>
+                </header>
+            </section>
 
-        <section>
-            <header>
-                <h1>Outside temperature</h1>
-            </header>
-        </section>
-    </section>
+            <section>
+                <header>
+                    <h2>Outside temperature</h2>
+                </header>
+            </section>
+        </article>
+    </main>
+
 
 
 </body>

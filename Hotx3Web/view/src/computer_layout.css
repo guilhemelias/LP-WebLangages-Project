@@ -1,0 +1,43 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 0 5em 0;
+}
+
+.nav nav {
+    margin-top: 5em;
+}
+
+.nav nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 80px;
+    margin: 0 1em 0 1em;
+}
+
+.nav a:hover {
+    color: #8D6490;
+}
+
+main {
+    display: flex;
+    margin: 70px;
+    justify-content: space-around;
+    padding: 0px 100px 0px 100px;
+}
+
+.artTemp {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.artHist {
+    width: inherit;
+    border-radius: 5%;
+}
