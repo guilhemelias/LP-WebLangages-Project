@@ -1,9 +1,53 @@
 {
-    "listTemp" : [
-      {
-        "insideTemp" : 17,
-        "outsideTemp" : 27,
-        "day" : 1
-    }
+    "listTemp": [{
+            "insideTemp": 12,
+            "outsideTemp": 21,
+            "day": 1
+        },
+        {
+            "insideTemp": 19,
+            "outsideTemp": 9,
+            "day": 2
+        },
+        {
+            "insideTemp": 27,
+            "outsideTemp": 3,
+            "day": 3
+        },
+        {
+            "insideTemp": 7,
+            "outsideTemp": 34,
+            "day": 4
+        },
+        {
+            "insideTemp": 20,
+            "outsideTemp": 22,
+            "day": 5
+        },
+        {
+            "insideTemp": 18,
+            "outsideTemp": 15,
+            "day": 6
+        },
+        {
+            "insideTemp": 9,
+            "outsideTemp": 7,
+            "day": 7
+        },
+        {
+            "insideTemp": 33,
+            "outsideTemp": 34,
+            "day": 8
+        },
+        {
+            "insideTemp": 46,
+            "outsideTemp": 25,
+            "day": 9
+        },
+        {
+            "insideTemp": 19,
+            "outsideTemp": -3,
+            "day": 10
+        }
     ]
 }

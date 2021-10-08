@@ -75,5 +75,9 @@ hr {
     border-radius: 100px;
     width: 200px;
     z-index: 2;
-    background-color: #4D9DE0;
+}
+
+#profile {
+    width: 20em;
+    height: 20em;
 }
