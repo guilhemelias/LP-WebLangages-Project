@@ -1,17 +1,3 @@
-var requestURLJSon = 'tempDataStub.json';
-var request = new XMLHttpRequest();
-
-request.open('GET', requestURLJSon);
-request.responseType = 'json';
-request.send();
-
-request.onload = function() {
-    var tempData = request.response;
-    refreshTemp(tempData);
-
-}
-
-
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -25,12 +11,12 @@ function refreshTemp(jsonTemp) {
 
     let circleTab = document.querySelectorAll(".customCircle ")
     circleTab.forEach((circle) => {
-        if (circle.getAttribute('name') == "inside") {
+        if (circle.getAttribute('id') == "inside") {
             circle.childNodes[3].textContent = newInsideTemp + " °C";
             applyCircleColor(newInsideTemp, circle);
             controlAlertInside(newInsideTemp);
         }
-        if (circle.getAttribute('name') == "outside") {
+        if (circle.getAttribute('id') == "outside") {
             circle.childNodes[3].textContent = newOutsideTemp + " °C";
             applyCircleColor(newOutsideTemp, circle);
             controlAlertOutside(newOutsideTemp);
@@ -52,28 +38,13 @@ function controlAlertInside(temp) {
 
 }
 
-
-function controlAlertOutside(temp) {
-
-    if (temp >= 18 && temp <= 24) {
-        document.getElementById("outsideAlert").style.visibility = "hidden";
-    }
-    if (temp < 18) {
-        document.getElementById("outsideAlert").setAttribute('tooltip', 'Alerte : Il fait froid, mettez un pull')
-    }
-    if (temp > 24) {
-        document.getElementById("outsideAlert").setAttribute('tooltip', 'Alerte : Il fait chaud, sortez léger')
-
-    }
-
-}
-
-
 function applyCircleColor(temp, circle) {
 
     var hexaCircle = pickHex(temp);
-
+  
     circle.style.borderColor = hexaCircle;
+
+    
     circle.style.borderTopColor = "white";
 
     let circleSpan = circle.querySelector('span');
@@ -85,16 +56,11 @@ function applyCircleColor(temp, circle) {
     } else {
         style.appendChild(document.createTextNode(css));
     }
-
+    
     document.getElementsByTagName('head')[0].appendChild(style);
 
 
 }
-
-
-
-
-
 
 //Color Gradient
 function pickHex(temp) {
@@ -128,43 +94,3 @@ function tempToWeight(temp) {
 
 
 
-
-
-
-
-var myChart = new Chart(document.getElementById("line-chart"), {
-    type: 'line',
-    data: {
-        labels: ["M", "Tu", "W", "Th", "F", "Sa", "Su"],
-        datasets: [{
-            data: [30, 14, 15, 18, 27, 22, 21],
-            label: "Inside",
-            borderColor: "#3e95cd",
-            fill: false
-        }, {
-            data: [7, -3, 30, 47, 45, 11, 14],
-            label: "Outside",
-            borderColor: "#8e5ea2",
-            fill: false
-        }]
-    },
-    options: {
-        legend: {
-            position: 'bottom'
-        },
-        scales: {
-            xAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }],
-            yAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }]
-        }
-    }
-
-
-});

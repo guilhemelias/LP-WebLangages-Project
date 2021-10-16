@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="src/design.css" />
     <link rel="stylesheet" href="src/computer_layout.css" />
-
+    <link rel="stylesheet" href="src/mobile_layout.css" />
     <title>HotHotHot - Temperature/Historic</title>
 </head>
 
@@ -14,30 +14,52 @@
     <header class="nav">
         <h1>Hot Hot Hot</h1>
 
-        <nav>
-            <a href="temperatureHistoricView.html" class="active">Temperature</a>
-            <a href="account.html">Account</a>
-            <a href="parameters.html">Parameters</a>
-        </nav>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li>
+                    <a href="temperatureHistoricView.html" class="active" >Temperature</a>
+                </li>
+                <li>
+                    <a href="account.html" >Account</a>
+                </li>
+                <li>
+                    <a href="parameters.html">Parameters</a>
+                </li>
+                <li style="display: none">
+                    <a  href="temperatureOnly.html">Temperature</a>
+                </li>
+            </ul>
+            <section class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </section>
+        </nav>   
     </header>
 
-    <main>
+    <main class="main">
+        
         <article class="artTemp">
-            <section class="customCircle" name="inside">
+            <section class="customCircle" id="inside">
                 <h2>INSIDE</h2>
-                <p name="insideTemp">23 °C</p>
+                <p id="insideTemp">23 °C</p>
                 <span class="alert-span" id="insideAlert">!</span>
             </section>
-
-            <section class="customCircle" name="outside">
+            <!-- <article class="test">
+ 
+                <section class="sectTest">
+                   <span><h2>HEY</h2></span>
+                </section>
+            </article> -->
+            <section class="customCircle" id="outside">
                 <h2>OUTSIDE</h2>
-                <p name="outsideTemp">15 °C</p>
+                <p id="outsideTemp">15 °C</p>
                 <span class="alert-span" id="outsideAlert">!</span>
             </section>
         </article>
 
         <hr>
-
+     
         <article class="artHist">
 
             <h2>TEMPERATURE HISTORIC</h2>
@@ -47,11 +69,16 @@
         </article>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script  src="get_json.js"></script>
+    <script  src="control_circle.js"></script>
+    <script  src="control_alert.js"></script>
+    <script  src="chart.js"></script>
+    <script  src="hamburger_menu.js"></script>
 
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<script type="text/javascript" src="alert.js"></script>
+
 
 
 </html>

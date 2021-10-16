@@ -1,0 +1,131 @@
+@media only screen and (max-width:600px) {
+
+    
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 4em 0 5em 0;
+        margin-top: 5em;
+    
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        margin-top: 0;
+    
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 12em;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+  
+    
+    .nav nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.3em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 80px;
+        margin: 0 1em 0 1em;
+    }
+
+
+  
+    .nav-menu.active {
+        
+        position:absolute;
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+  
+
+    
+    
+    
+    .nav a:hover {
+        color: #8D6490;
+    }
+    .hamburger {
+        
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    
+
+    .main {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s;
+    }
+    
+    
+    .main.active{
+        transform: translate(0px, 100px);
+    }
+
+
+    .account {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+        transition: 0.3s;
+    }
+
+    .account.active{
+        transform: translate(0px, 100px);
+    }
+
+    .artTemp {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    
+    .artHist {
+        visibility: hidden;
+        max-height: 0;
+        max-width: 0;
+    }
+
+    
+    hr {
+        display: none;
+        border: 2px solid #b1b1b1;
+        border-radius: 5px;
+        height: 30em;
+    }
+    
+}

@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="src/design.css" />
     <link rel="stylesheet" href="src/computer_layout.css" />
+    <link rel="stylesheet" href="src/mobile_layout.css" />
+
     <title>HotHotHot - Parameters</title>
 </head>
 
@@ -13,19 +15,42 @@
     <header class="nav">
         <h1>Hot Hot Hot</h1>
 
-        <nav>
-            <a href="temperatureHistoricView.html">Temperature</a>
-            <a href="account.html">Account</a>
-            <a href="parameters.html" class="active">Parameters</a>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li>
+                    <a href="temperatureHistoricView.html" >Temperature</a>
+                </li>
+                <li>
+                    <a href="account.html">Account</a>
+                </li>
+                <li>
+                    <a href="parameters.html" class="active">Parameters</a>
+                </li>
+                <li style="display: none;">
+                    <a  href="temperatureOnly.html">Temperature</a>
+                </li>
+            </ul>
+            <section class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </section>
         </nav>
     </header>
-
-    <section>
-        <header>
-            <h1>Parameters</h1>
-        </header>
-    </section>
-
+    
+    <main class="main">
+        <section>
+            <header>
+                <h1>Parameters</h1>
+            </header>
+        </section>
+    </main>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script  src="get_json.js"></script>
+    <script  src="control_circle.js"></script>
+    <script  src="control_alert.js"></script>
+    <script  src="chart.js"></script>
+    <script  src="hamburger_menu.js"></script>
 
 </html>
