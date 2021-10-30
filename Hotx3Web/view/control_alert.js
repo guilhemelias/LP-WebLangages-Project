@@ -1,6 +1,3 @@
-
-
-
 function controlAlertInside(temp) {
 
     if (temp >= 18 && temp <= 23) {
@@ -30,15 +27,3 @@ function controlAlertOutside(temp) {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

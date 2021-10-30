@@ -41,10 +41,10 @@ function controlAlertInside(temp) {
 function applyCircleColor(temp, circle) {
 
     var hexaCircle = pickHex(temp);
-  
+
     circle.style.borderColor = hexaCircle;
 
-    
+
     circle.style.borderTopColor = "white";
 
     let circleSpan = circle.querySelector('span');
@@ -56,7 +56,7 @@ function applyCircleColor(temp, circle) {
     } else {
         style.appendChild(document.createTextNode(css));
     }
-    
+
     document.getElementsByTagName('head')[0].appendChild(style);
 
 
@@ -91,6 +91,3 @@ function tempToWeight(temp) {
 
     return temp * 0.02857
 }
-
-
-

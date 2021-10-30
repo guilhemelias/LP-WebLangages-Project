@@ -1,9 +1,6 @@
-
-
-
 var chart = document.getElementById("line-chart");
 console.log(chart);
-if(chart!=null){
+if (chart != null) {
     var myChart = new Chart(document.getElementById("line-chart"), {
         type: 'line',
         data: {
@@ -37,7 +34,7 @@ if(chart!=null){
                 }]
             }
         }
-    
-    
+
+
     });
 }

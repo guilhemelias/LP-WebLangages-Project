@@ -1,13 +1,63 @@
-,
-    {
-        "temp": 11,
-        "day": 2
-    },
-    {
-      "temp": 15,
-      "day": 3      
-    },
-    {
-        "temp": 23,
-        "day": 4
-    }
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/design.css" />
+    <link rel="stylesheet" href="src/computer_layout.css" />
+    <link rel="stylesheet" href="src/mobile_layout.css" />
+    <title>HotHotHot - Temperature/Historic</title>
+</head>
+
+<body>
+
+    <header class="nav">
+        <h1>Hot Hot Hot</h1>
+
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li>
+                    <a href="temperatureHistoricView.html" class="active">Temperature</a>
+                </li>
+                <li>
+                    <a href="account.html">Account</a>
+                </li>
+                <li>
+                    <a href="parameters.html">Parameters</a>
+                </li>
+                <li id="temperature">
+                    <a href="historicOnly.html">Historic</a>
+                </li>
+            </ul>
+            <nav class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <article class="artHistOnly">
+
+            <h2>TEMPERATURE HISTORIC</h2>
+            <canvas id="line-chart" width="650" height="350"></canvas>
+
+
+        </article>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="get_json.js"></script>
+    <script src="control_circle.js"></script>
+    <script src="control_alert.js"></script>
+    <script src="chart.js"></script>
+    <script src="hamburger_menu.js"></script>
+
+
+</body>
+
+
+
+</html>
